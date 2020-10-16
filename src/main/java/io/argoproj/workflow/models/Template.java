@@ -53,7 +53,7 @@ import java.util.Map;
 public class Template {
   public static final String SERIALIZED_NAME_ACTIVE_DEADLINE_SECONDS = "activeDeadlineSeconds";
   @SerializedName(SERIALIZED_NAME_ACTIVE_DEADLINE_SECONDS)
-  private String activeDeadlineSeconds;
+  private io.kubernetes.client.custom.IntOrString activeDeadlineSeconds;
 
   public static final String SERIALIZED_NAME_AFFINITY = "affinity";
   @SerializedName(SERIALIZED_NAME_AFFINITY)
@@ -204,25 +204,25 @@ public class Template {
   private List<io.kubernetes.client.openapi.models.V1Volume> volumes = null;
 
 
-  public Template activeDeadlineSeconds(String activeDeadlineSeconds) {
+  public Template activeDeadlineSeconds(io.kubernetes.client.custom.IntOrString activeDeadlineSeconds) {
     
     this.activeDeadlineSeconds = activeDeadlineSeconds;
     return this;
   }
 
    /**
-   * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
+   * Get activeDeadlineSeconds
    * @return activeDeadlineSeconds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.")
+  @ApiModelProperty(value = "")
 
-  public String getActiveDeadlineSeconds() {
+  public io.kubernetes.client.custom.IntOrString getActiveDeadlineSeconds() {
     return activeDeadlineSeconds;
   }
 
 
-  public void setActiveDeadlineSeconds(String activeDeadlineSeconds) {
+  public void setActiveDeadlineSeconds(io.kubernetes.client.custom.IntOrString activeDeadlineSeconds) {
     this.activeDeadlineSeconds = activeDeadlineSeconds;
   }
 

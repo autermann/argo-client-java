@@ -20,7 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.argoproj.workflow.models.OwnerReference;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -55,7 +54,7 @@ public class SubmitOpts {
 
   public static final String SERIALIZED_NAME_OWNER_REFERENCE = "ownerReference";
   @SerializedName(SERIALIZED_NAME_OWNER_REFERENCE)
-  private OwnerReference ownerReference;
+  private io.kubernetes.client.openapi.models.V1OwnerReference ownerReference;
 
   public static final String SERIALIZED_NAME_PARAMETER_FILE = "parameterFile";
   @SerializedName(SERIALIZED_NAME_PARAMETER_FILE)
@@ -189,7 +188,7 @@ public class SubmitOpts {
   }
 
 
-  public SubmitOpts ownerReference(OwnerReference ownerReference) {
+  public SubmitOpts ownerReference(io.kubernetes.client.openapi.models.V1OwnerReference ownerReference) {
     
     this.ownerReference = ownerReference;
     return this;
@@ -202,12 +201,12 @@ public class SubmitOpts {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public OwnerReference getOwnerReference() {
+  public io.kubernetes.client.openapi.models.V1OwnerReference getOwnerReference() {
     return ownerReference;
   }
 
 
-  public void setOwnerReference(OwnerReference ownerReference) {
+  public void setOwnerReference(io.kubernetes.client.openapi.models.V1OwnerReference ownerReference) {
     this.ownerReference = ownerReference;
   }
 

@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import io.argoproj.workflow.models.Arguments;
 import io.argoproj.workflow.models.ArtifactRepositoryRef;
 import io.argoproj.workflow.models.ExecutorConfig;
-import io.argoproj.workflow.models.IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec;
 import io.argoproj.workflow.models.Metrics;
 import io.argoproj.workflow.models.PodGC;
 import io.argoproj.workflow.models.Synchronization;
@@ -110,7 +109,7 @@ public class WorkflowTemplateSpec {
 
   public static final String SERIALIZED_NAME_POD_DISRUPTION_BUDGET = "podDisruptionBudget";
   @SerializedName(SERIALIZED_NAME_POD_DISRUPTION_BUDGET)
-  private IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec podDisruptionBudget;
+  private io.kubernetes.client.openapi.models.V1beta1PodDisruptionBudgetSpec podDisruptionBudget;
 
   public static final String SERIALIZED_NAME_POD_G_C = "podGC";
   @SerializedName(SERIALIZED_NAME_POD_G_C)
@@ -581,7 +580,7 @@ public class WorkflowTemplateSpec {
   }
 
 
-  public WorkflowTemplateSpec podDisruptionBudget(IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec podDisruptionBudget) {
+  public WorkflowTemplateSpec podDisruptionBudget(io.kubernetes.client.openapi.models.V1beta1PodDisruptionBudgetSpec podDisruptionBudget) {
     
     this.podDisruptionBudget = podDisruptionBudget;
     return this;
@@ -594,12 +593,12 @@ public class WorkflowTemplateSpec {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec getPodDisruptionBudget() {
+  public io.kubernetes.client.openapi.models.V1beta1PodDisruptionBudgetSpec getPodDisruptionBudget() {
     return podDisruptionBudget;
   }
 
 
-  public void setPodDisruptionBudget(IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec podDisruptionBudget) {
+  public void setPodDisruptionBudget(io.kubernetes.client.openapi.models.V1beta1PodDisruptionBudgetSpec podDisruptionBudget) {
     this.podDisruptionBudget = podDisruptionBudget;
   }
 

@@ -7,7 +7,7 @@ Template is a reusable and composable unit of execution in a workflow
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activeDeadlineSeconds** | **String** | IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number. |  [optional]
+**activeDeadlineSeconds** | [**io.kubernetes.client.custom.IntOrString**](io.kubernetes.client.custom.IntOrString.md) |  |  [optional]
 **affinity** | [**io.kubernetes.client.openapi.models.V1Affinity**](io.kubernetes.client.openapi.models.V1Affinity.md) |  |  [optional]
 **archiveLocation** | [**ArtifactLocation**](ArtifactLocation.md) |  |  [optional]
 **arguments** | [**Arguments**](Arguments.md) |  |  [optional]

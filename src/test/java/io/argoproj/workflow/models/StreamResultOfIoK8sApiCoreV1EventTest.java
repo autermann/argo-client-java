@@ -18,6 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.argoproj.workflow.models.GrpcGatewayRuntimeStreamError;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,33 +28,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for PodDNSConfigOption
+ * Model tests for StreamResultOfIoK8sApiCoreV1Event
  */
-public class PodDNSConfigOptionTest {
-    private final PodDNSConfigOption model = new PodDNSConfigOption();
+public class StreamResultOfIoK8sApiCoreV1EventTest {
+    private final StreamResultOfIoK8sApiCoreV1Event model = new StreamResultOfIoK8sApiCoreV1Event();
 
     /**
-     * Model tests for PodDNSConfigOption
+     * Model tests for StreamResultOfIoK8sApiCoreV1Event
      */
     @Test
-    public void testPodDNSConfigOption() {
-        // TODO: test PodDNSConfigOption
+    public void testStreamResultOfIoK8sApiCoreV1Event() {
+        // TODO: test StreamResultOfIoK8sApiCoreV1Event
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'error'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void errorTest() {
+        // TODO: test error
     }
 
     /**
-     * Test the property 'value'
+     * Test the property 'result'
      */
     @Test
-    public void valueTest() {
-        // TODO: test value
+    public void resultTest() {
+        // TODO: test result
     }
 
 }

@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.argoproj.workflow.models.StreamResultOfEvent;
+import io.argoproj.workflow.models.StreamResultOfIoK8sApiCoreV1Event;
 import io.argoproj.workflow.models.StreamResultOfLogEntry;
 import io.argoproj.workflow.models.StreamResultOfWorkflowWatchEvent;
 import io.argoproj.workflow.models.Workflow;
@@ -2146,7 +2146,7 @@ public class WorkflowServiceApi {
      * @param listOptionsTimeoutSeconds Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. +optional. (optional)
      * @param listOptionsLimit limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
      * @param listOptionsContinue The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \&quot;next key\&quot;.  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
-     * @return StreamResultOfEvent
+     * @return StreamResultOfIoK8sApiCoreV1Event
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2154,8 +2154,8 @@ public class WorkflowServiceApi {
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
      </table>
      */
-    public StreamResultOfEvent watchEvents(String namespace, String listOptionsLabelSelector, String listOptionsFieldSelector, Boolean listOptionsWatch, Boolean listOptionsAllowWatchBookmarks, String listOptionsResourceVersion, String listOptionsTimeoutSeconds, String listOptionsLimit, String listOptionsContinue) throws ApiException {
-        ApiResponse<StreamResultOfEvent> localVarResp = watchEventsWithHttpInfo(namespace, listOptionsLabelSelector, listOptionsFieldSelector, listOptionsWatch, listOptionsAllowWatchBookmarks, listOptionsResourceVersion, listOptionsTimeoutSeconds, listOptionsLimit, listOptionsContinue);
+    public StreamResultOfIoK8sApiCoreV1Event watchEvents(String namespace, String listOptionsLabelSelector, String listOptionsFieldSelector, Boolean listOptionsWatch, Boolean listOptionsAllowWatchBookmarks, String listOptionsResourceVersion, String listOptionsTimeoutSeconds, String listOptionsLimit, String listOptionsContinue) throws ApiException {
+        ApiResponse<StreamResultOfIoK8sApiCoreV1Event> localVarResp = watchEventsWithHttpInfo(namespace, listOptionsLabelSelector, listOptionsFieldSelector, listOptionsWatch, listOptionsAllowWatchBookmarks, listOptionsResourceVersion, listOptionsTimeoutSeconds, listOptionsLimit, listOptionsContinue);
         return localVarResp.getData();
     }
 
@@ -2171,7 +2171,7 @@ public class WorkflowServiceApi {
      * @param listOptionsTimeoutSeconds Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. +optional. (optional)
      * @param listOptionsLimit limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
      * @param listOptionsContinue The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \&quot;next key\&quot;.  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
-     * @return ApiResponse&lt;StreamResultOfEvent&gt;
+     * @return ApiResponse&lt;StreamResultOfIoK8sApiCoreV1Event&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2179,9 +2179,9 @@ public class WorkflowServiceApi {
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<StreamResultOfEvent> watchEventsWithHttpInfo(String namespace, String listOptionsLabelSelector, String listOptionsFieldSelector, Boolean listOptionsWatch, Boolean listOptionsAllowWatchBookmarks, String listOptionsResourceVersion, String listOptionsTimeoutSeconds, String listOptionsLimit, String listOptionsContinue) throws ApiException {
+    public ApiResponse<StreamResultOfIoK8sApiCoreV1Event> watchEventsWithHttpInfo(String namespace, String listOptionsLabelSelector, String listOptionsFieldSelector, Boolean listOptionsWatch, Boolean listOptionsAllowWatchBookmarks, String listOptionsResourceVersion, String listOptionsTimeoutSeconds, String listOptionsLimit, String listOptionsContinue) throws ApiException {
         okhttp3.Call localVarCall = watchEventsValidateBeforeCall(namespace, listOptionsLabelSelector, listOptionsFieldSelector, listOptionsWatch, listOptionsAllowWatchBookmarks, listOptionsResourceVersion, listOptionsTimeoutSeconds, listOptionsLimit, listOptionsContinue, null);
-        Type localVarReturnType = new TypeToken<StreamResultOfEvent>(){}.getType();
+        Type localVarReturnType = new TypeToken<StreamResultOfIoK8sApiCoreV1Event>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2206,10 +2206,10 @@ public class WorkflowServiceApi {
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call watchEventsAsync(String namespace, String listOptionsLabelSelector, String listOptionsFieldSelector, Boolean listOptionsWatch, Boolean listOptionsAllowWatchBookmarks, String listOptionsResourceVersion, String listOptionsTimeoutSeconds, String listOptionsLimit, String listOptionsContinue, final ApiCallback<StreamResultOfEvent> _callback) throws ApiException {
+    public okhttp3.Call watchEventsAsync(String namespace, String listOptionsLabelSelector, String listOptionsFieldSelector, Boolean listOptionsWatch, Boolean listOptionsAllowWatchBookmarks, String listOptionsResourceVersion, String listOptionsTimeoutSeconds, String listOptionsLimit, String listOptionsContinue, final ApiCallback<StreamResultOfIoK8sApiCoreV1Event> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = watchEventsValidateBeforeCall(namespace, listOptionsLabelSelector, listOptionsFieldSelector, listOptionsWatch, listOptionsAllowWatchBookmarks, listOptionsResourceVersion, listOptionsTimeoutSeconds, listOptionsLimit, listOptionsContinue, _callback);
-        Type localVarReturnType = new TypeToken<StreamResultOfEvent>(){}.getType();
+        Type localVarReturnType = new TypeToken<StreamResultOfIoK8sApiCoreV1Event>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

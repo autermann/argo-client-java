@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonWriter;
 import io.argoproj.workflow.models.Arguments;
 import io.argoproj.workflow.models.ArtifactRepositoryRef;
 import io.argoproj.workflow.models.ExecutorConfig;
-import io.argoproj.workflow.models.IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec;
 import io.argoproj.workflow.models.Metrics;
 import io.argoproj.workflow.models.PodGC;
 import io.argoproj.workflow.models.Synchronization;

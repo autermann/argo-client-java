@@ -32,11 +32,11 @@ import java.io.IOException;
 public class Sequence {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
-  private String count;
+  private io.kubernetes.client.custom.IntOrString count;
 
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
-  private String end;
+  private io.kubernetes.client.custom.IntOrString end;
 
   public static final String SERIALIZED_NAME_FORMAT = "format";
   @SerializedName(SERIALIZED_NAME_FORMAT)
@@ -44,51 +44,51 @@ public class Sequence {
 
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
-  private String start;
+  private io.kubernetes.client.custom.IntOrString start;
 
 
-  public Sequence count(String count) {
+  public Sequence count(io.kubernetes.client.custom.IntOrString count) {
     
     this.count = count;
     return this;
   }
 
    /**
-   * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
+   * Get count
    * @return count
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.")
+  @ApiModelProperty(value = "")
 
-  public String getCount() {
+  public io.kubernetes.client.custom.IntOrString getCount() {
     return count;
   }
 
 
-  public void setCount(String count) {
+  public void setCount(io.kubernetes.client.custom.IntOrString count) {
     this.count = count;
   }
 
 
-  public Sequence end(String end) {
+  public Sequence end(io.kubernetes.client.custom.IntOrString end) {
     
     this.end = end;
     return this;
   }
 
    /**
-   * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
+   * Get end
    * @return end
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.")
+  @ApiModelProperty(value = "")
 
-  public String getEnd() {
+  public io.kubernetes.client.custom.IntOrString getEnd() {
     return end;
   }
 
 
-  public void setEnd(String end) {
+  public void setEnd(io.kubernetes.client.custom.IntOrString end) {
     this.end = end;
   }
 
@@ -116,25 +116,25 @@ public class Sequence {
   }
 
 
-  public Sequence start(String start) {
+  public Sequence start(io.kubernetes.client.custom.IntOrString start) {
     
     this.start = start;
     return this;
   }
 
    /**
-   * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
+   * Get start
    * @return start
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.")
+  @ApiModelProperty(value = "")
 
-  public String getStart() {
+  public io.kubernetes.client.custom.IntOrString getStart() {
     return start;
   }
 
 
-  public void setStart(String start) {
+  public void setStart(io.kubernetes.client.custom.IntOrString start) {
     this.start = start;
   }
 

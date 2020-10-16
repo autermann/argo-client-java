@@ -14,7 +14,7 @@
 package io.argoproj.workflow.apis;
 
 import io.argoproj.workflow.ApiException;
-import io.argoproj.workflow.models.StreamResultOfEvent;
+import io.argoproj.workflow.models.StreamResultOfIoK8sApiCoreV1Event;
 import io.argoproj.workflow.models.StreamResultOfLogEntry;
 import io.argoproj.workflow.models.StreamResultOfWorkflowWatchEvent;
 import io.argoproj.workflow.models.Workflow;
@@ -337,7 +337,7 @@ public class WorkflowServiceApiTest {
         String listOptionsTimeoutSeconds = null;
         String listOptionsLimit = null;
         String listOptionsContinue = null;
-        StreamResultOfEvent response = api.watchEvents(namespace, listOptionsLabelSelector, listOptionsFieldSelector, listOptionsWatch, listOptionsAllowWatchBookmarks, listOptionsResourceVersion, listOptionsTimeoutSeconds, listOptionsLimit, listOptionsContinue);
+        StreamResultOfIoK8sApiCoreV1Event response = api.watchEvents(namespace, listOptionsLabelSelector, listOptionsFieldSelector, listOptionsWatch, listOptionsAllowWatchBookmarks, listOptionsResourceVersion, listOptionsTimeoutSeconds, listOptionsLimit, listOptionsContinue);
 
         // TODO: test validations
     }

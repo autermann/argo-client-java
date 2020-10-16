@@ -36,7 +36,7 @@ public class Backoff {
 
   public static final String SERIALIZED_NAME_FACTOR = "factor";
   @SerializedName(SERIALIZED_NAME_FACTOR)
-  private String factor;
+  private io.kubernetes.client.custom.IntOrString factor;
 
   public static final String SERIALIZED_NAME_MAX_DURATION = "maxDuration";
   @SerializedName(SERIALIZED_NAME_MAX_DURATION)
@@ -66,25 +66,25 @@ public class Backoff {
   }
 
 
-  public Backoff factor(String factor) {
+  public Backoff factor(io.kubernetes.client.custom.IntOrString factor) {
     
     this.factor = factor;
     return this;
   }
 
    /**
-   * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
+   * Get factor
    * @return factor
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.")
+  @ApiModelProperty(value = "")
 
-  public String getFactor() {
+  public io.kubernetes.client.custom.IntOrString getFactor() {
     return factor;
   }
 
 
-  public void setFactor(String factor) {
+  public void setFactor(io.kubernetes.client.custom.IntOrString factor) {
     this.factor = factor;
   }
 

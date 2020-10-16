@@ -20,7 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.argoproj.workflow.models.CreateOptions;
 import io.argoproj.workflow.models.CronWorkflow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -33,7 +32,7 @@ import java.io.IOException;
 public class CreateCronWorkflowRequest {
   public static final String SERIALIZED_NAME_CREATE_OPTIONS = "createOptions";
   @SerializedName(SERIALIZED_NAME_CREATE_OPTIONS)
-  private CreateOptions createOptions;
+  private io.kubernetes.client.util.generic.options.CreateOptions createOptions;
 
   public static final String SERIALIZED_NAME_CRON_WORKFLOW = "cronWorkflow";
   @SerializedName(SERIALIZED_NAME_CRON_WORKFLOW)
@@ -44,7 +43,7 @@ public class CreateCronWorkflowRequest {
   private String namespace;
 
 
-  public CreateCronWorkflowRequest createOptions(CreateOptions createOptions) {
+  public CreateCronWorkflowRequest createOptions(io.kubernetes.client.util.generic.options.CreateOptions createOptions) {
     
     this.createOptions = createOptions;
     return this;
@@ -57,12 +56,12 @@ public class CreateCronWorkflowRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public CreateOptions getCreateOptions() {
+  public io.kubernetes.client.util.generic.options.CreateOptions getCreateOptions() {
     return createOptions;
   }
 
 
-  public void setCreateOptions(CreateOptions createOptions) {
+  public void setCreateOptions(io.kubernetes.client.util.generic.options.CreateOptions createOptions) {
     this.createOptions = createOptions;
   }
 

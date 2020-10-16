@@ -20,7 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.argoproj.workflow.models.CreateOptions;
 import io.argoproj.workflow.models.WorkflowTemplate;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -33,7 +32,7 @@ import java.io.IOException;
 public class WorkflowTemplateCreateRequest {
   public static final String SERIALIZED_NAME_CREATE_OPTIONS = "createOptions";
   @SerializedName(SERIALIZED_NAME_CREATE_OPTIONS)
-  private CreateOptions createOptions;
+  private io.kubernetes.client.util.generic.options.CreateOptions createOptions;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
   @SerializedName(SERIALIZED_NAME_NAMESPACE)
@@ -44,7 +43,7 @@ public class WorkflowTemplateCreateRequest {
   private WorkflowTemplate template;
 
 
-  public WorkflowTemplateCreateRequest createOptions(CreateOptions createOptions) {
+  public WorkflowTemplateCreateRequest createOptions(io.kubernetes.client.util.generic.options.CreateOptions createOptions) {
     
     this.createOptions = createOptions;
     return this;
@@ -57,12 +56,12 @@ public class WorkflowTemplateCreateRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public CreateOptions getCreateOptions() {
+  public io.kubernetes.client.util.generic.options.CreateOptions getCreateOptions() {
     return createOptions;
   }
 
 
-  public void setCreateOptions(CreateOptions createOptions) {
+  public void setCreateOptions(io.kubernetes.client.util.generic.options.CreateOptions createOptions) {
     this.createOptions = createOptions;
   }
 

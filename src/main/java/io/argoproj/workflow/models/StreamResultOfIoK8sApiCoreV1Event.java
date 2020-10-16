@@ -20,27 +20,26 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.argoproj.workflow.models.Event;
 import io.argoproj.workflow.models.GrpcGatewayRuntimeStreamError;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * StreamResultOfEvent
+ * StreamResultOfIoK8sApiCoreV1Event
  */
 
-public class StreamResultOfEvent {
+public class StreamResultOfIoK8sApiCoreV1Event {
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
   private GrpcGatewayRuntimeStreamError error;
 
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
-  private Event result;
+  private io.kubernetes.client.openapi.models.V1Event result;
 
 
-  public StreamResultOfEvent error(GrpcGatewayRuntimeStreamError error) {
+  public StreamResultOfIoK8sApiCoreV1Event error(GrpcGatewayRuntimeStreamError error) {
     
     this.error = error;
     return this;
@@ -63,7 +62,7 @@ public class StreamResultOfEvent {
   }
 
 
-  public StreamResultOfEvent result(Event result) {
+  public StreamResultOfIoK8sApiCoreV1Event result(io.kubernetes.client.openapi.models.V1Event result) {
     
     this.result = result;
     return this;
@@ -76,12 +75,12 @@ public class StreamResultOfEvent {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Event getResult() {
+  public io.kubernetes.client.openapi.models.V1Event getResult() {
     return result;
   }
 
 
-  public void setResult(Event result) {
+  public void setResult(io.kubernetes.client.openapi.models.V1Event result) {
     this.result = result;
   }
 
@@ -94,9 +93,9 @@ public class StreamResultOfEvent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StreamResultOfEvent streamResultOfEvent = (StreamResultOfEvent) o;
-    return Objects.equals(this.error, streamResultOfEvent.error) &&
-        Objects.equals(this.result, streamResultOfEvent.result);
+    StreamResultOfIoK8sApiCoreV1Event streamResultOfIoK8sApiCoreV1Event = (StreamResultOfIoK8sApiCoreV1Event) o;
+    return Objects.equals(this.error, streamResultOfIoK8sApiCoreV1Event.error) &&
+        Objects.equals(this.result, streamResultOfIoK8sApiCoreV1Event.result);
   }
 
   @Override
@@ -108,7 +107,7 @@ public class StreamResultOfEvent {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StreamResultOfEvent {\n");
+    sb.append("class StreamResultOfIoK8sApiCoreV1Event {\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("}");
