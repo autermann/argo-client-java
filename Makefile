@@ -129,13 +129,3 @@ build:
 	sed 's/<dependencies>/<dependencies><dependency><groupId>io.kubernetes<\/groupId><artifactId>client-java<\/artifactId><version>10.0.0<\/version><\/dependency>/g' pom.xml > tmp && mv tmp pom.xml
 	docker run -v ~/.m2:/root/.m2 -v `pwd`:/wd -w /wd maven:3-openjdk-8 \
 		mvn install -DskipTests -Dmaven.javadoc.skip
-	git add .
-	git commit -m 'Updated to $(VERSION)' || git diff --exit-code
-	git tag -f $(VERSION)
-
-.PHONY: publish
-publish: build
-	# https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages
-	docker run -v ~/.m2:/root/.m2 -v `pwd`:/wd -w /wd maven:3-openjdk-8 \
-		mvn deploy -DskipTests -Dmaven.javadoc.skip -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/argoproj-labs/argo-client-java
-	git push --tags
